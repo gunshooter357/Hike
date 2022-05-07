@@ -1,6 +1,7 @@
 #include "HikeList.h"
 #include "Hike.h"
 #include <iostream>
+#include <algorithm>
 using namespace std;
 HikeList::HikeList() {
 
@@ -11,6 +12,39 @@ bool operator<(const Hike& leftHike, const Hike& rightHike) {
 }
 
 
+
 void HikeList::addHike(Hike newHike, double newPrice) {
 	mapList.insert(make_pair(newHike, newPrice));
 }
+
+void HikeList::addHike(string newLocation, std::string newName, int newDuration, char newDifficulty, double newPrice) {
+	Hike newHike(newLocation, newName, newDuration, newDifficulty);
+	this->addHike(newHike, newPrice);
+}
+
+double HikeList::getPrice(string hikeName)const {
+	auto iter = find_if(mapList.begin(), mapList.end(), [&hikeName](const pair<Hike,double>& elem){
+		return elem.first.getName() == hikeName;
+		});
+	return iter->second;
+}
+
+void HikeList::printAllLocations() {
+	auto iter = mapList.begin();
+	iter++;
+	for (auto it = mapList.begin(); iter != mapList.end(); ++it) {
+		if (it->first.getLocation() == iter->first.getLocation()) {
+			it++;
+			iter++;
+		}
+		else {
+			cout << it->first.getLocation() << endl;
+			iter++;
+		}
+	}
+}
+
+
+
+
+

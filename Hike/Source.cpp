@@ -5,19 +5,16 @@
 #include "MemberList.h"
 using namespace std;
 int main() {
-	Hike myHike("Califonia", "Cali", 50, 'H');
-	Hike myHike1("oregen", "Aus", 50, 'H');
-	Hike myHike2("texas", "Box", 50, 'H');
-	Hike myHike3("white House", "Dog", 50, 'H');
-	Hike myHike4("Hawaii", "Egg", 50, 'H');
 	HikeList newList;
-	newList.addHike(myHike, 70);
-	newList.addHike(myHike1, 0);
-	newList.addHike(myHike2, 7077);
-	newList.addHike(myHike3, 707);
-	newList.addHike(myHike4, 7);
-
-
+	newList.addHike("Hawaii", "Egg", 50, 'H', 70);
+	newList.addHike("white House", "Dog", 50, 'H', 0);
+	newList.addHike("texas", "Box", 50, 'H', 7077);
+	newList.addHike("texas", "jr", 50, 'H', 7077);
+	newList.addHike("texas", "tim", 50, 'H', 7077);
+	newList.addHike("oregen", "Aus", 50, 'H', 707);
+	newList.addHike("Califonia", "Cali", 50, 'H', 7);
+	newList.getPrice("Cali");
+	newList.printAllLocations();
 
 	
 	return 0;
