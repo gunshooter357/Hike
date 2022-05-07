@@ -1,4 +1,3 @@
-#pragma once
 #ifndef HIKE_H
 #define HIKE_H
 #include <string>
@@ -17,10 +16,10 @@ public:
     void print() const;
 
 private:
-    int memberID;
+    int memberID = 0;
     std::string fName;
     std::string lName;
-    int points;
+    int points = 0;
 };
 
 #endif

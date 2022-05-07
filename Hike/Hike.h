@@ -9,14 +9,14 @@ public:
 
 	friend std::ostream& operator<<(std::ostream& out, const Hike& myHike);
 
-	std::string getLocation();
+	std::string getLocation()const;
 
-	std::string getName();
+	std::string getName()const;
 
-	int getDuration();
+	int getDuration()const;
 	
 
-	char getDifficulty();
+	char getDifficulty()const;
 
 	~Hike();
 

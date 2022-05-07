@@ -1,6 +1,11 @@
 #include "Hike.h"
 #include <iostream>
 using namespace std;
+
+Hike::Hike() {
+	duration = 0;
+}
+
 Hike::Hike(string newLocation, string newName, int newDuration, char newDiff) {
 	location = newLocation;
 	name = newName;
@@ -15,20 +20,20 @@ ostream& operator<<(ostream& out, const Hike& myHike){
 	return out;
  }
 
-string Hike::getLocation(){
+string Hike::getLocation()const{
 	return location;
 }
 
-string Hike::getName() {
+string Hike::getName()const{
 	return name;
 }
 
-int Hike::getDuration() {
+int Hike::getDuration()const{
 	return duration;
 
 }
 
-char Hike::getDifficulty() {
+char Hike::getDifficulty()const{
 	return difficulty;
 }
 

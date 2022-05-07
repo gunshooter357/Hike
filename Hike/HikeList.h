@@ -1,18 +1,22 @@
-#ifndef HIKEList_H
+#ifndef HIKE_H
 #define HIKEList_H
-#include <string>
 #include "Hike.h"
-class HikeList :public Hike
-{
+#include <string>
+#include <map>
+class HikeList:public Hike{
 public:
+	HikeList();
 
+	friend bool operator<(const Hike& leftHike, const Hike& rightHike);	
 
+	void addHike(Hike newHike, double newPrice);
 
 private:
+	
 
 
+	std::multimap<Hike, double>mapList;
 	double price = 0;
-
 
 
 };
