@@ -5,21 +5,21 @@
 
 class Member
 {
-public:
-    Member();
-    Member(std::string FIrstName, std::string LastName);
-    void addPoints(int val);
-    void setID(int id);
-    int getMemberID() const;
-    std::string getlName() const;
-    int getPoints() const;
-    void print() const;
+    public:
+        Member();
+        Member(std::string FIrstName, std::string LastName);
+        void addPoints(int val);
+        void setID(int id);
+        int getMemberID() const;
+        std::string getlName() const;
+        int getPoints() const;
+        void print() const;
 
-private:
-    int memberID = 0;
-    std::string fName;
-    std::string lName;
-    int points = 0;
+    private:
+        int memberID = 0;
+        std::string fName;
+        std::string lName;
+        int points = 0;
 };
 
 #endif
