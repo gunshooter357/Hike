@@ -4,6 +4,7 @@
 #include "Member.h"
 #include "MemberList.h"
 using namespace std;
+
 int main() {
 	Hike myHike("Califonia", "Cali", 50, 'H');
 	Hike myHike1("oregen", "Aus", 50, 'H');
