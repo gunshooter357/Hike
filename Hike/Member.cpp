@@ -8,16 +8,11 @@ Default constructor
 Sets default value for member variables when needed. (Why is "when" underlined? Refer to the Standards about strings.)
 */
 
-Member::Member()
-{
-    int memberID = 0;
-    string fName;
-    string lName;
-    int points = 0;
-}
 
 Member::Member(string FirstName, string LastName)
 {
+    int memberID = 0;
+    int points = 0;
     fName = FirstName;
     lName = LastName;
 }

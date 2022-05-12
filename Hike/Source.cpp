@@ -3,6 +3,7 @@
 #include "Hike.h"
 #include "Member.h"
 #include "MemberList.h"
+#include "HikeReader.h"
 using namespace std;
 
 int main() {
@@ -17,8 +18,6 @@ int main() {
 	newList.addHike(myHike2, 7077);
 	newList.addHike(myHike3, 707);
 	newList.addHike(myHike4, 7);
-
-
 
 	
 	return 0;
