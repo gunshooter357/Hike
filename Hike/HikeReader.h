@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 	(name header)
 */
@@ -46,3 +47,53 @@ void getHikeData(HikeList& hikeList)
 }
 
 
+=======
+/*
+	(name header)
+*/
+
+#include "HikeList.h"
+
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <iomanip>
+
+using namespace std;
+
+const string HIKES_FILE = "hikes_database.txt";
+
+void createHikeList(ifstream& infile, HikeList& hikeList)
+{
+	string location,
+	       hikeName;
+	int duration = 0;
+	char difficulty = 'e';
+	double price = 0.0;
+
+	while (!infile.eof())
+	{
+		infile >> location >> hikeName >> duration >> difficulty >> price;
+		hikeList.addHike(location, hikeName, duration, difficulty, price);
+	}
+}
+
+void getHikeData(HikeList& hikeList)
+{
+	ifstream infile;
+
+	infile.open(HIKES_FILE);
+
+	if (!infile)
+	{
+		cerr << HIKES_FILE << " does not exist." << endl;
+		exit(1); // terminates program
+	}
+
+	createHikeList(infile, hikeList);
+
+	infile.close();
+}
+
+
+>>>>>>> e701477a2f537f16d755a5f0d2ad20e99030b702
