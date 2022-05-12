@@ -1,4 +1,4 @@
-#ifndef HIKE_H
+#ifndef HIKEList_H
 #define HIKEList_H
 #include "Hike.h"
 #include <string>
@@ -12,7 +12,7 @@ public:
 	void addHike(Hike newHike, double newPrice);
 
 	void printByDuration(int days);
-	
+
 private:
 	
 

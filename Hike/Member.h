@@ -3,17 +3,19 @@
 #include <string>
 
 
-class Member
+class Hike
 {
     public:
-        Member();
-        Member(std::string FIrstName, std::string LastName);
+        Member():memberID(0), points(0) {};
+        Member(std::string FirstName, std::string LastName);
         void addPoints(int val);
         void setID(int id);
         int getMemberID() const;
         std::string getlName() const;
         int getPoints() const;
         void print() const;
+        template <class T1>, <class T2>
+        bool operator==(const &T1, const &T2);
 
     private:
         int memberID = 0;

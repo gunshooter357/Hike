@@ -3,11 +3,6 @@
 #include <iostream>
 using namespace std;
 
-/*
-Default constructor
-Sets default value for member variables when needed. (Why is "when" underlined? Refer to the Standards about strings.)
-*/
-
 
 Member::Member(string FirstName, string LastName)
 {
@@ -48,8 +43,8 @@ void Member::print() const
     cout << "\t Points available: " << points << endl;
 }
 
-template <class T>, <class T2>
-bool Member::operator ==(const T &a, const T2 &b)
+template <class T1>, <class T2>
+bool Member::operator==(const T1 &a, const T2 &b)
 {
     return (a == b);
 }

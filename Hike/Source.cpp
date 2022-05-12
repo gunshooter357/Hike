@@ -1,6 +1,6 @@
 #include <iostream>
-#include "HikeList.h"
 #include "Hike.h"
+#include "HikeList.h"
 #include "Member.h"
 #include "MemberList.h"
 #include "HikeReader.h"
@@ -19,7 +19,6 @@ int main() {
 	newList.addHike(myHike3, 707);
 	newList.addHike(myHike4, 7);
 
-	
 	return 0;
 	system("pause");
 }
