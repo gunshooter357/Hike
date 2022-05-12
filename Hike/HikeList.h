@@ -11,6 +11,8 @@ public:
 
 	void addHike(Hike newHike, double newPrice);
 
+	void printByDuration(int days);
+	
 private:
 	
 
