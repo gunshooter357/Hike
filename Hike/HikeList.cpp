@@ -17,9 +17,9 @@ void HikeList::addHike(Hike newHike, double newPrice) {
 
 void printByDuration(int days)
 {
-	for(int i = 0, i < size; i ++)
+	for(int i = 0; i < Hike.duration; i ++)
 	{
-		if(i.file == days)
+		if(Hike.duration == days)
 		{
 			cout << "" << endl;
 		}

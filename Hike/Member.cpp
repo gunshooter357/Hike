@@ -47,3 +47,9 @@ void Member::print() const
     cout << fName << ", " << lName << endl;
     cout << "\t Points available: " << points << endl;
 }
+
+template <class T>, <class T2>
+bool Member::operator ==(const T &a, const T2 &b)
+{
+    return (a == b);
+}
