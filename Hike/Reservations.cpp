@@ -41,16 +41,16 @@ int * findReservation(int reservNum)
 
 void cancelReservation(int reservation_number,DLLptr &L)
 {
-   if(L->next==NULL)
-      L=NULL;
+   if(L->getNext()== nullptr)
+      L = nullptr;
    else
    {
-   DLLptr temp=findReservation(reservation,L);
-   temp->previous->next=temp->next;
-   if(temp->next)
-   temp->next->previous=temp->previous;
-   temp->next=NULL;
-   temp->previous=NULL;
-   temp=NULL:
+   DLLptr temp = findReservation(reservation,L);
+   temp->getPrevious()->getNext() = temp->getNext();
+   if(temp->getNext())
+   temp->getNext()->getPrevious() = temp->getPrevious();
+   temp->getNext() = nullptr;
+   temp->getPrevious() = nullptr;
+   temp = nullptr;
    }
 }
