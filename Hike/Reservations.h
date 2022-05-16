@@ -2,7 +2,7 @@
 #define RESERVATIONS_H
 #include <string>
 
-class Hike
+class Reservations:public Hike
 {
     public:
         Reservations();
