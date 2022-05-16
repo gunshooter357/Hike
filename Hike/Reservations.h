@@ -17,4 +17,6 @@ class Hike
         int * findReservation(int reservNum);
 };
 
+
+
 #endif
