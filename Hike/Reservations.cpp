@@ -39,7 +39,7 @@ int * findReservation(int reservNum)
      }
 }
 
-void cancelReservation(int reserveNum,DLLptr &L)
+void cancelReservation(int reservNum,DLLptr &L)
 {
    if(L->getNext()== nullptr)
       L = nullptr;
