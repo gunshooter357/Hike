@@ -5,14 +5,16 @@
 class Hike
 {
     public:
-        Reservations()
+        Reservations();
+        int addReservation(int memberID, std::string namHike);
 
     private:
-        int reservNum;
+        int reservNum = 50001;
         int memberId;
         std::string namHike;
         Node* next;
         Node* prev;
+        int * findReservation(int reservNum);
 };
 
 #endif
