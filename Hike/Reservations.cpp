@@ -1,3 +1,5 @@
+#include "Reservations.h"
+
 void cancelReservation(int reservation_number,DLLptr &L)
 {
    if(L->next==NULL)
