@@ -7,6 +7,7 @@ class Hike
     public:
         Reservations();
         int addReservation(int memberID, std::string namHike);
+        void cancelReservation(int reservation_number,DLLptr &L);
 
     private:
         int reservNum = 50001;

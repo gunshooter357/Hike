@@ -39,14 +39,18 @@ int * findReservation(int reservNum)
      }
 }
 
-/*
-Function findReservation
-This is a private function, because it will be used only by its own class.
-Write this function in the private section of the class, before the member variables.
-Parameter:
-An int storing a reservation number.
-The function returns a pointer to the node that stores the reservation.
-Assumptions:
-The list is non-empty.
-The reservation exists in the list.
-*/
+void cancelReservation(int reservation_number,DLLptr &L)
+{
+   if(L->next==NULL)
+      L=NULL;
+   else
+   {
+   DLLptr temp=findReservation(reservation,L);
+   temp->previous->next=temp->next;
+   if(temp->next)
+   temp->next->previous=temp->previous;
+   temp->next=NULL;
+   temp->previous=NULL;
+   temp=NULL:
+   }
+}
