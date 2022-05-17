@@ -75,10 +75,12 @@ void printReservation(int reservNum, HikeList newHikeList, MemberList newMemberL
 void clearList()
 {
     Node* temp = new Node();
-    while (first != nullptr) {
+    while (first != nullptr) 
+    {
         temp = first;
         first = first->getNext();
         free(temp);
+    }
 }
 
     
