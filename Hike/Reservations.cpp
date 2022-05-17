@@ -80,3 +80,6 @@ void clearList()
         first = first->getNext();
         free(temp);
 }
+
+    
+first = last = nullptr;
