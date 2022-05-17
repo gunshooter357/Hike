@@ -54,3 +54,20 @@ void cancelReservation(int reservNum,DLLptr &L)
    temp = nullptr;
    }
 }
+
+
+void printReservation(int reservNum, HikeList newHikeList, MemberList newMemberList)
+{
+    Node *ptr = findReservation(reservNum);
+    string hikeName = ptr.getData();
+    HikeList::printByHikeName(hikeName);
+    cout << endl;
+    int memberID = ptr.getData();
+    int points =  MemberList::getPoints(memberID);
+    double price = HikeList::getPrice(memberID);
+    price = price - (points / 100);
+    cout << "Discounted price using points: " << price<<endl;
+
+
+
+}
