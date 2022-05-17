@@ -58,3 +58,62 @@ int addNewMember(MemberList& MList)
 
     return MemberList::getLastID();
 }
+
+
+void makeReservation(HikeList& HList, MemberList& MList, Reservations& Reserve)
+{
+    askIfMember();
+    
+    HikeList::printAllLocations();
+    cout << "Please make a selection: " << endl;
+    string n;
+    cin >> n;
+    
+    HikeList::printByHikeName(n);
+    HikeList::getPrice(n);
+    MemberList::getPoints(n);
+    Reservations::addReservation(memberId, n);
+}
+
+void viewReservation(HikeList& HList, MemberList& MList, Reservations& Reserve)
+{
+    int res = 0;
+    cout << "Enter reservation #: ";
+    cin >> res;
+    
+    Reservations::printReservation(res, HList, MList);
+    
+}
+
+void cancelReservation(HikeList& HList, MemberList& MList, Reservations& Reserve)
+{
+    int res = 0;
+    cout << "Enter reservation #: ";
+    cin >> res;
+    
+    Reservations::printReservation(res, HList, MList);
+    
+    char sure;
+    cout << "Are you sure you want to cancel this reservation? (y/n)"; << endl;
+    cin >> sure;
+    
+    if(sure == 'y')
+    {
+        Reservations::cancelReservation(res);
+        cout << "Reservation #" << res << "has been canceled." << endl;
+    }
+    
+}
+
+
+void askToReserve(HikeList& HList, MemberList& MList, Reservations& Reserve)
+{
+    char c;
+    cout << "Would you like to make a reservation? (y/n)" ;
+    cin >> c;
+    
+    if(c == 'y')
+    {
+        Reservations::makeReservation();   
+    }
+}
